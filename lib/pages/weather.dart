@@ -263,7 +263,7 @@ class Weather extends StatelessWidget {
 }
 
 var data = [
-  {'time': '09:00', 'temp': '12'},
+  {'time': '09:00', 'temp': '12°'},
   {'time': '10:00', 'temp': '14°'},
   {'time': '11:00', 'temp': '17°'},
   {'time': '12:00', 'temp': '19°'},
