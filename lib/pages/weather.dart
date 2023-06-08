@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:flutter_todo/pages/main_screen.dart';
 import 'package:flutter_todo/widgets/rain.dart';
 import 'dart:math' as math;
@@ -8,6 +9,8 @@ import 'package:flutter_todo/pages/main_screen.dart';
 import 'package:flutter_todo/widgets/time.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'dart:core';
+
 
 class Weather extends StatelessWidget {
   const Weather({super.key});
@@ -79,7 +82,11 @@ class Weather extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'СР, 17 МАЯ',
+                          DateFormat('dd-MM-yyyy').format(DateTime.now()),
+                          style: TextStyle(fontSize: 25, color: Colors.white),
+                        ),
+                        Text(
+                          DateFormat('HH:mm').format(DateTime.now()),
                           style: TextStyle(fontSize: 25, color: Colors.white),
                         ),
                         Text(
@@ -88,7 +95,7 @@ class Weather extends StatelessWidget {
                         ),
                         SizedBox(
                           height: 10,
-                        ),
+                        ), 
                         Text(
                           description,
                           style: TextStyle(fontSize: 20, color: Colors.white),
@@ -97,7 +104,7 @@ class Weather extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    bottom: res_height * 0.02,
+                    bottom: res_height * 0.6,
                     left: 20,
                     child: Text(
                       cityName,

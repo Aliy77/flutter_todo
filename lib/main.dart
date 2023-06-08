@@ -4,6 +4,7 @@ import 'package:flutter_todo/pages/home.dart';
 import 'package:flutter_todo/pages/main_screen.dart';
 import 'package:flutter_todo/pages/weather.dart';
 import 'firebase_options.dart';
+import 'package:swipe_back_detector/swipe_back_detector.dart';
 
 
 void initFirebase() async {
